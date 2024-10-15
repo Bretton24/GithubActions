@@ -3,13 +3,14 @@ name: Docker-Workflow
 on:
   push:
     paths:
-      - '**.java'
+      - '**/*.java'
   workflow_dispatch:
+
 jobs:
   build_Docker_image:
     name: Push Docker image to Docker hub
     runs-on: ubuntu-latest
 
     steps:
-      -name: Echo Test
-      run: echo This is a test
+      - name: Echo Test  # Add a space after the dash
+        run: echo "This is a test"  # Add quotation marks for clarity
